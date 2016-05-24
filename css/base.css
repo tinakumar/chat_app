@@ -1,0 +1,32 @@
+#message{
+	margin-bottom: 10px;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.ui-message-list{
+	list-style: none;
+	text-align: center;
+}
+
+#ui-message-list-item{
+	border-bottom: 1px solid blue;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.btn{
+	padding: 8px 15px;
+	margin-bottom: 5px;
+}
+
+.btn-block{
+	height: 40px;
+}
+
+body {
+	background-color: #f2f2f2;
+}

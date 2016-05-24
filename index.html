@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+	<!-- Angular -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<!-- Bootstrap compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- keyboard widget css & script -->
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script> 
+	<script src="js/base.js"></script> 
+
+	<!-- css for the preview keyset extension -->
+	<link href="css/base.css" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Initialize the angular app -->
+	<div ng-app="ChatApp">
+		<div class='content' ng-controller="messageController">
+			<div class="container">
+				
+				<div class="row">
+					<div class='col-xs-7 text-center'>
+					<h3 class="text-center">Send your messages</h3>
+						<textarea id="message" placeholder="Enter your message..." ng-model="$messageItem" class="form-control input-lg" rows='7'></textarea>
+					</div>	
+    			</div> <!-- div row	 --> 
+
+	    		<!-- Keyboard -->
+	    		<div class="row">
+	    			<div class='col-xs-8'>
+	    				<div>
+		    				<button type='button' class='btn btn-default'>1</button>
+		    				<button type='button' class='btn btn-default'>2</button>
+		    				<button type='button' class='btn btn-default'>3</button>
+		    				<button type='button' class='btn btn-default'>4</button>
+		    				<button type='button' class='btn btn-default'>5</button>
+		    				<button type='button' class='btn btn-default'>6</button>
+		    				<button type='button' class='btn btn-default'>7</button>
+		    				<button type='button' class='btn btn-default'>8</button>
+		    				<button type='button' class='btn btn-default'>9</button>
+		    				<button type='button' class='btn btn-default'>0</button>
+		    				<button type='button' class='btn btn-default'>-</button>
+		    				<button type='button' class='btn btn-default'>=</button>
+		    				<button type='button' class='btn btn-default delete-btn'>delete</button>
+	    				</div>
+	    				<div>
+		    				<button type='button' class='btn btn-default tab-btn'>tab</button>
+		    				<button type='button' class='btn btn-default'>q</button>
+		    				<button type='button' class='btn btn-default'>w</button>
+		    				<button type='button' class='btn btn-default'>e</button>
+		    				<button type='button' class='btn btn-default'>r</button>
+		    				<button type='button' class='btn btn-default'>t</button>
+		    				<button type='button' class='btn btn-default'>y</button>
+		    				<button type='button' class='btn btn-default'>u</button>
+		    				<button type='button' class='btn btn-default'>i</button>
+		    				<button type='button' class='btn btn-default'>o</button>
+		    				<button type='button' class='btn btn-default'>p</button>
+		    				<button type='button' class='btn btn-default'>[</button>
+		    				<button type='button' class='btn btn-default'>]</button>
+		    				<button type='button' class='btn btn-default'>\</button>
+	    				</div>	
+	    				<div>
+			    			<button type='button' class='btn btn-default caps-lock-btn'>caps lock</button>
+			    			<button type='button' class='btn btn-default'>a</button>
+			    			<button type='button' class='btn btn-default'>s</button>
+			    			<button type='button' class='btn btn-default'>d</button>
+			   				<button type='button' class='btn btn-default'>f</button>
+			   				<button type='button' class='btn btn-default'>g</button>
+			   				<button type='button' class='btn btn-default'>h</button>
+			   				<button type='button' class='btn btn-default'>j</button>
+		    				<button type='button' class='btn btn-default'>k</button>
+		    				<button type='button' class='btn btn-default'>l</button>
+			   				<button type='button' class='btn btn-default'>;</button>
+			   				<button type='button' class='btn btn-default'>'</button>
+		    				<button type='button' class='btn btn-default enter-btn'>enter</button>	
+	    				</div>
+	    				<div>
+		    				<button type='button' class='btn btn-default shift-btn'>shift</button>
+		    				<button type='button' class='btn btn-default'>z</button>
+		    				<button type='button' class='btn btn-default'>x</button>
+		    				<button type='button' class='btn btn-default'>c</button>
+		    				<button type='button' class='btn btn-default'>v</button>
+		    				<button type='button' class='btn btn-default'>b</button>
+		    				<button type='button' class='btn btn-default'>n</button>
+		    				<button type='button' class='btn btn-default'>m</button>
+		    				<button type='button' class='btn btn-default'>,</button>
+		    				<button type='button' class='btn btn-default'>.</button>
+		    				<button type='button' class='btn btn-default'>?</button>
+		    				<button type='button' class='btn btn-default shift-btn'>shift</button>
+	    				</div>
+	    				<div>
+	    					<button type='button' class='btn-md btn-block btn btn-default space-btn'></button>
+	    					<button class="btn btn-success ui-send-button js-send-btn" ng-click="addMessage()">Send</button>	
+	    				</div>
+					</div> <!-- div col   -->		
+
+					<div class="col-xs-4 text-center">
+						<h3 class="text-center">View Messages:</h3>
+						
+						<ul class="ui-message-list">
+							<li ng-repeat="message in messages | orderBy: 'date'" id="ui-message-list-item">{{message.text}}</li>
+						</ul>
+					</div>	<!-- div col -->
+				</div> <!-- div row -->
+			</div>	<!-- div container -->	
+		</div> <!-- div ng-controller -->
+	</div> <!-- div ng-app  --> 
+</body>
+
+</html>
